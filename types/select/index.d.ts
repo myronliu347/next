@@ -370,6 +370,21 @@ export interface SelectProps extends HTMLAttributesWeak, CommonProps {
     searchValue?: string;
 
     /**
+     * 是否一行显示，仅在 mode 为 multiple 的时候生效
+     */
+    tagInline?: boolean;
+
+    /**
+     * 最多显示多少个 tag
+     */
+    maxTagCount?: number;
+
+    /**
+     * 隐藏多余 tag 时显示的内容，在 maxTagCount 生效时起作用
+     */
+    maxTagPlaceholder?: (values: Array<any>, totoal: Array<any>) => React.ReactNode;
+
+    /**
      * 选择后是否立即隐藏菜单 (mode=multiple/tag 模式生效)
      */
     hiddenSelected?: boolean;

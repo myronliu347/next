@@ -26,6 +26,11 @@ export interface ItemProps extends React.HTMLAttributes<HTMLElement>, CommonProp
     wrapperCol?: {};
 
     /**
+     * 表单元素是否撑满
+     */
+    fullWidth?: boolean;
+
+    /**
      * 自定义提示信息，如不设置，则会根据校验规则自动生成.
      */
     help?: React.ReactNode;
